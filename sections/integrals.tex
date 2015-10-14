@@ -1,70 +1,172 @@
-%\begin{landscape}
+\section*{Integrals and Derivatives}
 
-\section{Tabelle der Grundintegrale}
+\subsection*{Table of base integrals}
+\bgroup
+    \def\arraystretch{1.3}
+    \begin{longtable}{ll}
+        \toprule
+        Ableitung & Integral \\
+        \hline
+        \midrule
 
-\begin{table}[!htb]
-    %\caption{}
-    \begin{minipage}{.5\linewidth}
-        \centering
-        \begin{tabular}{ll}
-            \toprule
-            Ableitung & Integral \\
+        \endhead
+        \endfoot
+        \endlastfoot
 
-            \midrule
-            $\frac{d}{dx} c = 0$ &
-            $\int 0\,dx = c$
-            \\
-            $\frac{d}{dx} x = 1$ &
-            $\int 1\,dx = x + c$
-            \\
-            $\frac{d}{dx} x^n = (n-1)x^{n-1}, n\not=0$ &
-            $\int x^n\,dx = \frac{1}{n+1} x^{n+1} + c$
-            \\
-            $\frac{d}{dx} \ln{x} = \frac{1}{x}, x > 0$ &
-            $\int \frac{1}{x}\,dx = \ln|x| + c$
-            \\
-            $\frac{d}{dx} \ln{-x} = \frac{-1}{-x} = \frac{1}{x}, x < 0$ &
-            $\int \frac{1}{x}\,dx = \ln|x| + c$
-            \\
+        % -------------------------------------------------------------------------------------
+        % Basic shit
+        % -------------------------------------------------------------------------------------
+        $\frac{d}{dx} c = 0$ &
+        $\int 0\,dx = c$
+        \\
+        $\frac{d}{dx} x = 1$ &
+        $\int 1\,dx = x + c$
+        \\
+        $\frac{d}{dx} x^n = (n-1)x^{n-1}, n\not=0$ &
+        $\int x^n\,dx = \frac{1}{n+1} x^{n+1} + c$
+        \\
+        $\frac{d}{dx} \ln{x} = \frac{1}{x}, x > 0$ &
+        $\int \frac{1}{x}\,dx = \ln|x| + c$
+        \\
+        $\frac{d}{dx} \ln{-x} = \frac{-1}{-x} = \frac{1}{x}, x < 0$ &
+        $\int \frac{1}{x}\,dx = \ln|x| + c$
+        \\
 
-            \midrule
-            $\frac{d}{dx} e^x = e^x$ &
-            $\int e^x\,dx = e^x + c$
-            \\
-            $\frac{d}{dx} a^x = a^x \ln{a}$ &
-            $\int a^x\,dx = \frac{1}{\ln{a}} a^x + c, a \neq 1$
-            \\
+        % -------------------------------------------------------------------------------------
+        % Exponents
+        % -------------------------------------------------------------------------------------
+        \midrule
+        $\frac{d}{dx} e^x = e^x$ &
+        $\int e^x\,dx = e^x + c$
+        \\
+        $\frac{d}{dx} a^x = a^x \ln{a}$ &
+        $\int a^x\,dx = \frac{1}{\ln{a}} a^x + c, a \neq 1$
+        \\
 
-            \midrule
-            $\frac{d}{dx} \sin{x} = \cos{x}$ &
-            $\int \cos{x}\,dx = \sin{x} + c$
-            \\
-            $\frac{d}{dx} \cos{x} = -\sin{x}$ &
-            $\int \sin{x}\,dx = -\cos{x} + c$
-            \\
-            \multirow{2}{*}{$\frac{d}{dx} \tan{x} = \frac{1}{\cos^2{x}} = 1 + \tan^2{x}$} &
-            $\int \frac{1}{\cos^2{x}}\,dx = \tan{x} + c$ \\ &
-            $\int \tan^2{x}\,dx = \tan{x}-x + c$
-            \\
-            \multirow{2}{*}{$\frac{d}{dx} \cot{x} = -\frac{1}{\sin^2{x}} = -1 - \cot^2{x}$} &
-            $\int \frac{1}{\sin^2{x}}\,dx = -\cot{x} + c$ \\ &
-            $\int \cot^2{x}\,dx = -\cot{x}-x + c$
-            \\
+        % -------------------------------------------------------------------------------------
+        % Trig functions
+        % -------------------------------------------------------------------------------------
+        \midrule
+        $\frac{d}{dx} \sin{x} = \cos{x}$ &
+        $\int \cos{x}\,dx = \sin{x} + c$
+        \\
+        $\frac{d}{dx} \cos{x} = -\sin{x}$ &
+        $\int \sin{x}\,dx = -\cos{x} + c$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \tan{x} = \frac{1}{\cos^2{x}} = 1 + \tan^2{x}$} &
+        $\int \frac{1}{\cos^2{x}}\,dx = \tan{x} + c$ \\* &
+        $\int \tan^2{x}\,dx = \tan{x}-x + c$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \cot{x} = -\frac{1}{\sin^2{x}} = -1 - \cot^2{x}$} &
+        $\int \frac{1}{\sin^2{x}}\,dx = -\cot{x} + c$ \\* &
+        $\int \cot^2{x}\,dx = -\cot{x}-x + c$
+        \\
+        \midrule
+        &
+        $\int \cos^2{x}\,dx = \frac{1}{2}\cos{(x)}\sin{(x)}+\frac{1}{2}x + c$
+        \\
+        &
+        $\int \sin^2{x}\,dx = \frac{1}{2}x-\frac{1}{2}\cos{(x)}\sin{(x)} + c$
+        \\
 
-            \midrule
+        % -------------------------------------------------------------------------------------
+        % Inverse trig functions
+        % -------------------------------------------------------------------------------------
+        \midrule
+        $\frac{d}{dx} \arcsin{x} = \frac{1}{\sqrt{1-x^2}}$ &
+        $\int \frac{1}{\sqrt{1-x^2}}\,dx = arcsin{x} + c_1$
+        \\
+        $\frac{d}{dx} \arccos{x} = -\frac{1}{\sqrt{1-x^2}}$ &
+        $\int \frac{1}{\sqrt{1-x^2}}\,dx = -\arccos{x} + c_2$
+        \\
+        $\frac{d}{dx} \arctan{x} = \frac{1}{1+x^2}$ &
+        $\int \frac{1}{1+x^2}\,dx = \arctan{x} + c_1$
+        \\
+        $\frac{d}{dx} \arccot{x} = -\frac{1}{1+x^2} $ &
+        $\int \frac{1}{1+x^2} = -\arccot{x} + c_2$
+        \\
+     
+        % -------------------------------------------------------------------------------------
+        % Hyperbolic trig functions
+        % -------------------------------------------------------------------------------------
+        \midrule
+        $\frac{d}{dx} \sinh{x} = \cosh{x}$ &
+        $\int \cosh{x}\,dx = \sinh{x} + c$
+        \\
+        $\frac{d}{dx} \cosh{x} = \sinh{x}$ &
+        $\int \sinh{x}\,dx = \cosh{x} + c$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \tanh{x} = \frac{1}{\cosh^2{x}} = 1 - \tanh^2{x}$} &
+        $\int \frac{1}{\cosh^2{x}}\,dx = \tanh{x} + c$ \\* &
+        $\int \tanh^2{x}\,dx = x - \tanh{x} + c$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \coth{x} = -\frac{1}{\sinh^2{x}} = 1 - \coth^2{x}$} &
+        $\int \frac{1}{\sinh^2{x}}\,dx = -\coth{x} = c$ \\* &
+        $\int \coth^2{x}\,dx = x - \coth{x} + c$
+        \\
+        \midrule
+        &
+        $\int \cosh^2{x}\,dx = \frac{1}{2}\cosh{(x)}\sinh{(x)}+\frac{1}{2}x + c$
+        \\
+        &
+        $\int \sinh^2{x}\,dx = \frac{1}{4}\sinh{(2x)}-\frac{1}{2}x + c$
+        \\
 
-        \end{tabular}
-    \end{minipage}%
-%    \begin{minipage}{.5\linewidth}
-%        \centering
-%        \begin{tabular}{ll}
-%            \toprule
-%            Ableitung & Integral \\
-%
-%            \midrule
-%        \end{tabular}
-%    \end{minipage}
-\end{table}
+        % -------------------------------------------------------------------------------------
+        % Inverse hyperbolic trig functions
+        % -------------------------------------------------------------------------------------
+        \midrule
+        \multirow{2}{*}{$\frac{d}{dx} \arsinh{x} = \frac{1}{\sqrt{x^2+1}}$} &
+        $\int \frac{1}{\sqrt{x^2+1}}\,dx = \arsinh{x} + c$ \\* &
+        $=\ln{\left(x + \sqrt{x^2+1}\right)} + c$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \arcosh{x} = \frac{1}{\sqrt{x^2-1}}$} &
+        $\int \frac{1}{\sqrt{x^2-1}}\,dx = \arcosh{x} + c$ \\* &
+        $=\ln{\left(x + \sqrt{x^2-1}\right)} + c, x > 1$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \artanh{x} = \frac{1}{1-x^2}, |x| < 1$} &
+        $\int \frac{1}{1-x^2}\,dx = \artanh{x} + c$ \\* &
+        $=\frac{1}{2}\ln{\frac{1+x}{1-x}} + c, |x| < 1$
+        \\
+        \multirow{2}{*}{$\frac{d}{dx} \arcoth{x} = \frac{1}{1-x^2}, |x| > 1$} &
+        $\int \frac{1}{1-x^2}\,dx = \arcoth{x} + c$ \\* &
+        $=\frac{1}{2}\ln{\frac{x+1}{x-1}} + c, |x| > 1$
+        \\
 
-%\end{landscape}
+        % -------------------------------------------------------------------------------------
+        % Substitution, partial integration
+        % -------------------------------------------------------------------------------------
+
+        \bottomrule
+    \end{longtable}
+
+\egroup
+
+
+\subsection*{Important operations}
+\bgroup
+    \def\arraystretch{1.3}
+    \begin{tabular}{ll}
+
+        \multirow{2}{*}{Product Rule of Derivatives} &
+        $f(x)' = (g(x)h(x)i(x))'$ \\* &
+        $\hspace{5mm} = g'(x)h(x)i(x) + g(x)h'(x)i(x) + g(x)h(x)i'(x)$
+        \\
+
+        Quotient Rule of Derivatives &
+        $f(x)' = \frac{g(x)}{h(x)} = \frac{g'(x)h(x) - g(x)h'(x)}{h^2(x)}$
+        \\
+
+        &\\
+
+        \multirow{2}{*}{Substitution} &
+        $\int_a^b f[u(x)]u'(x)\,dx = \int_{u(a)}^{u(b)} f(z)\,dz$ \\* &
+        $\hspace{4mm}\textrm{with}\hspace{4mm} z = u(x)$
+        \\
+
+        Partial Integration &
+        $\int_a^a u(x)v'(x)\,dx = u(x)v(x)\rvert_a^b - \int_a^b u'(x)v(x)\,dx$
+        \\
+    \end{tabular}
+\egroup
 
