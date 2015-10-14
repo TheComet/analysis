@@ -1,0 +1,70 @@
+%\begin{landscape}
+
+\section{Tabelle der Grundintegrale}
+
+\begin{table}[!htb]
+    %\caption{}
+    \begin{minipage}{.5\linewidth}
+        \centering
+        \begin{tabular}{ll}
+            \toprule
+            Ableitung & Integral \\
+
+            \midrule
+            $\frac{d}{dx} c = 0$ &
+            $\int 0\,dx = c$
+            \\
+            $\frac{d}{dx} x = 1$ &
+            $\int 1\,dx = x + c$
+            \\
+            $\frac{d}{dx} x^n = (n-1)x^{n-1}, n\not=0$ &
+            $\int x^n\,dx = \frac{1}{n+1} x^{n+1} + c$
+            \\
+            $\frac{d}{dx} \ln{x} = \frac{1}{x}, x > 0$ &
+            $\int \frac{1}{x}\,dx = \ln|x| + c$
+            \\
+            $\frac{d}{dx} \ln{-x} = \frac{-1}{-x} = \frac{1}{x}, x < 0$ &
+            $\int \frac{1}{x}\,dx = \ln|x| + c$
+            \\
+
+            \midrule
+            $\frac{d}{dx} e^x = e^x$ &
+            $\int e^x\,dx = e^x + c$
+            \\
+            $\frac{d}{dx} a^x = a^x \ln{a}$ &
+            $\int a^x\,dx = \frac{1}{\ln{a}} a^x + c, a \neq 1$
+            \\
+
+            \midrule
+            $\frac{d}{dx} \sin{x} = \cos{x}$ &
+            $\int \cos{x}\,dx = \sin{x} + c$
+            \\
+            $\frac{d}{dx} \cos{x} = -\sin{x}$ &
+            $\int \sin{x}\,dx = -\cos{x} + c$
+            \\
+            \multirow{2}{*}{$\frac{d}{dx} \tan{x} = \frac{1}{\cos^2{x}} = 1 + \tan^2{x}$} &
+            $\int \frac{1}{\cos^2{x}}\,dx = \tan{x} + c$ \\ &
+            $\int \tan^2{x}\,dx = \tan{x}-x + c$
+            \\
+            \multirow{2}{*}{$\frac{d}{dx} \cot{x} = -\frac{1}{\sin^2{x}} = -1 - \cot^2{x}$} &
+            $\int \frac{1}{\sin^2{x}}\,dx = -\cot{x} + c$ \\ &
+            $\int \cot^2{x}\,dx = -\cot{x}-x + c$
+            \\
+
+            \midrule
+
+        \end{tabular}
+    \end{minipage}%
+%    \begin{minipage}{.5\linewidth}
+%        \centering
+%        \begin{tabular}{ll}
+%            \toprule
+%            Ableitung & Integral \\
+%
+%            \midrule
+%        \end{tabular}
+%    \end{minipage}
+\end{table}
+
+%\end{landscape}
+
