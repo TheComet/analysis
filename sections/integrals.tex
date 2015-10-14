@@ -170,3 +170,84 @@
     \end{tabular}
 \egroup
 
+
+\subsection*{Substitutions}
+
+\bgroup
+    \def\arraystretch{1.1}
+    \begin{longtable}{ll}
+        \toprule
+        Integral Type & Substitution \\
+        \midrule
+
+        \endhead
+        \endfoot
+        \endlastfoot
+
+        \multirow{2}{*}{$\int f(ax+b)\,dx = \frac{1}{a}\int f(z)\,dz$} &
+        $z=ax+b$ \\* &
+        $dx = \frac{1}{a}\,dz$
+        \\
+
+        & \\
+
+        \multirow{2}{*}{$\int f(\varphi(x))^n \cdot \varphi'(x)\,dx = \frac{(\varphi(x))^{n+1}}{n+1} + c$} &
+        $z=\varphi(x)$ \\* &
+        $dx = \frac{dz}{\varphi'(x)}$
+        \\
+
+        & \\
+
+        \multirow{2}{*}{$\int \frac{\varphi'(x)}{\varphi(x)}\,dx = \ln|\varphi(x)| + c$} &
+        $z=\varphi(x)$ \\* &
+        $dx = \frac{dz}{\varphi'(x)}$
+        \\
+
+        & \\
+
+        \multirow{3}{*}{$\int f\left(x, \sqrt{a^2-x^2}\right)\,dx$} &
+        $x = a\sin{z}$ \\* &
+        $dx = a\cos{z}\,dz$ \\* &
+        $\sqrt{a^-x^2} = a\cos{z}$
+        \\
+
+        & \\
+
+        \multirow{3}{*}{$\int f\left(x, \sqrt{a^2+x^2}\right)\,dx$} &
+        $x = a\sinh{z}$ \\* &
+        $dx = a\cosh{z}\,dz$ \\* &
+        $\sqrt{a^2+x^2} = a\cosh{z}$
+        \\
+
+        & \\
+
+        \multirow{3}{*}{$\int f\left(x, \sqrt{x^2-a^2}\right)\,dx$} &
+        $x = a\cosh{z}$ \\* &
+        $dx = a\sinh{z}\,dz$ \\* &
+        $\sqrt{x^2-a^2} = a\sinh{z}$
+        \\
+
+        \bottomrule
+    \end{longtable}
+\egroup
+
+
+\subsection*{Lathed Bodies}
+
+\bgroup
+    \def\arraystretch{1.2}
+    \begin{tabular}{ll}
+        Volume, X axis rotation: &
+        $V_x = \pi\int_a^b\left(f(x)\right)^2\,dx$ \\
+
+        Volume, Y axis rotation: &
+        $V_y = \pi\int_a^b\left(f^{-1}(y)\right)^2\,dy$ \\
+        & ($f(x) = f^{-1}(y)$) (Invert function first) \\
+
+        Arc length: &
+        $L = \int_a^b \sqrt{1+\left(f'(x)\right)^2}\,dx$ \\
+
+        Lateral surface: &
+        \\
+    \end{tabular}
+\egroup

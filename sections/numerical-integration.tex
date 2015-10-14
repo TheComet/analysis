@@ -1,0 +1,53 @@
+\section*{Numerical Integration}
+
+\begin{tabular}{p{.333\linewidth}p{.333\linewidth}p{.333\linewidth}}
+    $\sum\limits_{k=1}^{n} k^2 = \frac{n\left(n+1\right)\left(2n+1\right)}{6}$ &
+    $\sum\limits_{k=1}^{n-1} k^2 = \frac{n\left(n-1\right)\left(2n+1\right)}{6}$ &
+    $\sum\limits_{k=1}^{n} k^3 = \frac{n^2\left(n+1\right)^2}{4}$ \\
+\end{tabular}
+
+\subsection*{Approximation Formulas}
+
+\begin{tabular}{ll}
+    Rect. Approx. Left: &
+    $\int_a^b f(x)\,dx \approx \sum\limits_{k=1}^{n} \frac{b-a}{n} \cdot f\left(a+(k-1)\frac{b-a}{n}\right)$ \\
+    Rect. Approx. Right: &
+    $\int_a^b f(x)\,dx \approx \sum\limits_{k=1}^{n} \frac{b-a}{n} \cdot f\left(a+k\frac{b-a}{n}\right)$ \\
+    Trapezoidal Approx. : &
+    $\int_a^b f(x)\,dx \approx \sum\limits_{k=1}^{n} \frac{b-a}{n} \cdot \frac{ f\left(a+k\frac{b-a}{n}\right) + f\left(a+(k-1)\frac{b-a}{n}\right) }{2}$ \\
+    & \\
+    Rect. Approx. Left: &
+    $\int_0^1 x^2\,dx \approx \sum\limits_{k=1}^{n} \frac{1}{n}\left(\frac{k-1}{n}\right)^2$ \\
+    Rect. Approx. Right: &
+    $\int_0^1 x^2\,dx \approx \sum\limits_{k=1}^{n} \frac{1}{n}\left(\frac{k}{n}\right)^2 = \frac{1}{n^3}\cdot\frac{(n+1)n(2n+1)}{6}$ \\
+    Trapezoidal Approx. : &
+    $\int_0^1 x^2\,dx \approx \sum\limits_{k=1}^{n} \frac{1}{2n}\cdot\frac{2k^2 - 2k + 1}{n^2}$ \\
+\end{tabular}
+
+\subsection*{Example}
+
+\begin{equation}
+    \int_a^b x^2\,dx
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        U_n &= 0 + x_1^2h + x_2^2h + \ldots + x_{n-1}^2h \\
+          & = (1h)^2h + (2h)^2h + \ldots + ((n-1)h)^2h \\
+          & = h^3(1+2^2+3^2+\ldots+(n-1)^2) \\
+          & = \frac{a^3}{n^3}(1+2^2+3^2+\ldots+(n-1)^2)
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        O_n &= x_1^2h + x_2^2h + \ldots + x_nh \\
+          & = (1h)^2h + (2h)^2h + \ldots + (nh)^2h \\
+          & = h^3(1+2^2+3^2+\ldots+n^2) \\
+          & = \frac{a^3}{n^3}(1+2^2+3^2+\ldots+n^2)
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \lim\limits_{n\to\infty} U_n = \lim\limits_{n\to\infty} \frac{a^3\left(2n^3-n-1\right)}{6n^2} = \frac{a^3}{3}
+\end{equation}
+\begin{equation}
+    \lim\limits_{n\to\infty} O_n = \lim\limits_{n\to\infty} \frac{a^3\left(2n^3+3n+1\right)}{6n^2} = \frac{a^3}{3}
+\end{equation}
